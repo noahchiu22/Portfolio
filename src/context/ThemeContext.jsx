@@ -1,9 +1,20 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import Cookies from 'js-cookie';
 
 const ThemeContext = createContext();
 
+const THEME_COOKIE_KEY = 'portfolio_theme_mode';
+
 export const ThemeProvider = ({ children }) => {
-  const [mode, setMode] = useState('light');
+  const [mode, setMode] = useState(() => {
+    // 從 cookie 中讀取主題設置，如果沒有則默認為 'light'
+    return Cookies.get(THEME_COOKIE_KEY) || 'light';
+  });
+
+  // 當主題改變時，更新 cookie
+  useEffect(() => {
+    Cookies.set(THEME_COOKIE_KEY, mode, { expires: 365 }); // cookie 有效期為一年
+  }, [mode]);
 
   const toggleTheme = () => {
     setMode((prevMode) => {
