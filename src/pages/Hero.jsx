@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography, Button, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
-import { Link as RouterLink } from 'react-router-dom';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const Hero = () => {

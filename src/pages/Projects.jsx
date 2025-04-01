@@ -4,16 +4,10 @@ import {
   Container,
   Typography,
   Grid,
-  Card,
-  CardContent,
-  CardMedia,
-  CardActions,
   Button,
-  Chip,
   Paper,
 } from '@mui/material';
 import { motion } from 'framer-motion';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 
 const Projects = () => {
