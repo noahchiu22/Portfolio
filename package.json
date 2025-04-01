@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "main": "src/index.jsx",
+  "homepage": "https://noahchiu22.github.io/Portfolio",
   "dependencies": {
     "@craco/craco": "^7.1.0",
     "@emotion/react": "^11.11.3",
@@ -15,6 +16,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/js-cookie": "^3.0.6",
     "framer-motion": "^11.0.5",
+    "gh-pages": "^6.3.0",
     "js-cookie": "^3.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -26,7 +28,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "craco build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
