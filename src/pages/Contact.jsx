@@ -16,7 +16,8 @@ import {
 } from '@mui/material';
 import { motion } from 'framer-motion';
 import EmailIcon from '@mui/icons-material/Email';
-import PhoneIcon from '@mui/icons-material/Phone';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const Contact = () => {
@@ -58,14 +59,19 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <PhoneIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
-      title: 'Phone',
-      content: '+886 912-345-678',
+      icon: <LinkedInIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
+      title: 'LinkedIn',
+      content: 'https://www.linkedin.com/in/noahchiu22/',
+    },
+    {
+      icon: <GitHubIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
+      title: 'GitHub',
+      content: 'https://github.com/noahchiu22',
     },
     {
       icon: <EmailIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
       title: 'Email',
-      content: 'contact@example.com',
+      content: 'fg5678910@gmail.com',
     },
     {
       icon: <LocationOnIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
@@ -88,7 +94,7 @@ const Contact = () => {
           Get in Touch
         </Typography>
         <Grid container spacing={4}>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={6}>
             <Paper
               component={motion.div}
               initial={{ x: -20, opacity: 0 }}
@@ -110,7 +116,7 @@ const Contact = () => {
               </List>
             </Paper>
           </Grid>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={6}>
             <Paper
               component={motion.div}
               initial={{ x: 20, opacity: 0 }}
