@@ -42,7 +42,7 @@ const About = () => {
                 Currently hold the position of Back-End Deputy Manager at Smart Automation Technology Co., Ltd.
               </Typography>
               <Button
-                variant="contained"
+                variant="outlined"
                 color="primary"
                 startIcon={<DownloadIcon />}
                 sx={{

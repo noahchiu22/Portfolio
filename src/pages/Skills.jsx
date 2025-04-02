@@ -19,7 +19,7 @@ const Skills = () => {
   };
 
   return (
-    <Box id="skills" sx={{ py: 8 }}>
+    <Box id="skills" sx={{ py: 8, bgcolor: 'background.paper'  }}>
       <Container>
         <Typography
           component={motion.h2}

@@ -92,9 +92,6 @@ const Hero = () => {
                   borderRadius: 2,
                   textTransform: 'none',
                   fontSize: '1.1rem',
-                  '&:hover': {
-                    backgroundColor: 'primary.dark',
-                  },
                 }}
               >
                 Contact Me
@@ -110,10 +107,6 @@ const Hero = () => {
                   borderRadius: 2,
                   textTransform: 'none',
                   fontSize: '1.1rem',
-                  '&:hover': {
-                    backgroundColor: 'primary.main',
-                    color: 'background.default',
-                  },
                 }}
               >
                 View Projects

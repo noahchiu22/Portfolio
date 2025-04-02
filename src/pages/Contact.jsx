@@ -45,11 +45,13 @@ const Contact = () => {
     e.preventDefault();
     // Handle form submission logic here
     console.log('Form submitted:', formData);
-    setSnackbar({
-      open: true,
-      message: 'Message sent successfully!',
-      severity: 'success',
-    });
+    if (formData.name + formData.email + formData.subject + formData.message !== '') {
+      setSnackbar({
+        open: true,
+        message: 'Message sent successfully!',
+        severity: 'success',
+      });
+    }
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
@@ -61,21 +63,25 @@ const Contact = () => {
     {
       icon: <LinkedInIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
       title: 'LinkedIn',
+      type: 'link',
       content: 'https://www.linkedin.com/in/noahchiu22/',
     },
     {
       icon: <GitHubIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
       title: 'GitHub',
+      type: 'link',
       content: 'https://github.com/noahchiu22',
     },
     {
       icon: <EmailIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
       title: 'Email',
+      type: 'email',
       content: 'fg5678910@gmail.com',
     },
     {
       icon: <LocationOnIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
       title: 'Location',
+      type: 'text',
       content: 'Taipei, Taiwan',
     },
   ];
@@ -110,6 +116,8 @@ const Contact = () => {
                       primary={info.title}
                       secondary={info.content}
                       primaryTypographyProps={{ variant: 'h6' }}
+                      onClick={() => info.type === 'link' && window.open(info.content, '_blank')}
+                      sx={{ cursor: info.type === 'link' && 'pointer' }}
                     />
                   </ListItem>
                 ))}
@@ -133,7 +141,6 @@ const Contact = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      required
                     />
                   </Grid>
                   <Grid item xs={12} sm={6}>
@@ -141,10 +148,8 @@ const Contact = () => {
                       fullWidth
                       label="Email"
                       name="email"
-                      type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      required
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -154,7 +159,6 @@ const Contact = () => {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      required
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -166,7 +170,6 @@ const Contact = () => {
                       rows={4}
                       value={formData.message}
                       onChange={handleChange}
-                      required
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -188,12 +191,12 @@ const Contact = () => {
         <Snackbar
           open={snackbar.open}
           autoHideDuration={6000}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
           onClose={handleCloseSnackbar}
         >
           <Alert
             onClose={handleCloseSnackbar}
             severity={snackbar.severity}
-            sx={{ width: '100%' }}
           >
             {snackbar.message}
           </Alert>

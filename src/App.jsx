@@ -81,25 +81,30 @@ const AppContent = () => {
       components: {
         MuiButton: {
           styleOverrides: {
-            root: {
+            root: (({ theme }) => ({
               borderRadius: '0.5rem',
               textTransform: 'none',
               fontWeight: 500,
               fontSize: '1rem',
               padding: '0.75rem 1.25rem',
               '&:hover': {
-                backgroundColor: mode === 'light' 
+                backgroundColor: mode === 'light'
                   ? 'rgba(110, 87, 224, 0.08)'
                   : 'rgba(110, 87, 224, 0.2)',
               },
-            },
-            contained: {
-              backgroundColor: '#6E57E0',
-              color: '#FFFFFF',
+            })),
+            contained: (({ theme }) => ({
               '&:hover': {
-                backgroundColor: '#5a46b8',
+                backgroundColor: theme.palette.primary.main,
+                color: theme.palette.background.default,
               },
-            },
+            })),
+            outlined: (({ theme }) => ({
+              '&:hover': {
+                backgroundColor: theme.palette.primary.main,
+                color: theme.palette.background.default,
+              },
+            })),
           },
         },
         MuiAppBar: {
@@ -113,6 +118,17 @@ const AppContent = () => {
         MuiIconButton: {
           styleOverrides: {
             root: {
+              color: themeConfigs[mode].text.primary,
+            },
+          },
+        },
+        MuiAlert: {
+          styleOverrides: {
+            root: {
+              width: '100%',
+              borderRadius: '20px',
+              border: `1px solid ${themeConfigs[mode].primary.main}`,
+              backgroundColor: themeConfigs[mode].background.paper,
               color: themeConfigs[mode].text.primary,
             },
           },
