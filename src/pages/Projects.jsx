@@ -13,36 +13,51 @@ import LaunchIcon from '@mui/icons-material/Launch';
 const Projects = () => {
   const projects = [
     {
-      title: 'Portfolio Website',
+      title: 'MES',
       description:
-        'A modern, responsive portfolio website built with React and Material-UI. Features smooth animations and a clean design.',
-      image: 'https://via.placeholder.com/400x300',
-      technologies: ['React', 'Material-UI', 'Framer Motion'],
-      github: 'https://github.com/yourusername/portfolio',
-      demo: 'https://yourportfolio.com',
+        'Manufacturing Execution System that streamlines production processes, tracks real-time data, and improves operational efficiency.',
+      // image: 'https://via.placeholder.com/400x300',
+      technologies: ['Go', 'Python', 'PostgreSQL', 'React'],
+      // demo: 'https://mes-demo.example.com',
     },
     {
-      title: 'E-Commerce Platform',
+      title: 'QMS',
       description:
-        'A full-stack e-commerce platform with user authentication, product management, and payment integration.',
-      image: 'https://via.placeholder.com/400x300',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-      github: 'https://github.com/yourusername/ecommerce',
-      demo: 'https://yourecommerce.com',
+        'Quality Management System for monitoring and ensuring product quality standards, with defect tracking and statistical analysis.',
+      // image: 'https://via.placeholder.com/400x300',
+      technologies: ['Go', 'PostgreSQL', 'React'],
+      // demo: 'https://qms-demo.example.com',
     },
     {
-      title: 'Task Management App',
-      description:
-        'A collaborative task management application with real-time updates and team collaboration features.',
-      image: 'https://via.placeholder.com/400x300',
-      technologies: ['React', 'Firebase', 'Redux'],
-      github: 'https://github.com/yourusername/taskmanager',
-      demo: 'https://yourtaskmanager.com',
+      title: 'SPC',
+      description: 'Statistical Process Control application for monitoring manufacturing processes, detecting variations, and ensuring consistent product quality through statistical methods.',
+      // image: 'https://via.placeholder.com/400x300',
+      technologies: ['Go', 'PostgreSQL', 'React'],
+      // demo: 'https://spc-demo.example.com',
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A weather dashboard application that displays current weather conditions, forecasts, and interactive maps using various weather APIs.',
-      demoLink: 'https://example.com/weather',
+      title: 'ERP',
+      description:
+        'Enterprise Resource Planning solution that integrates core business processes including inventory, procurement, and financial management.',
+      // image: 'https://via.placeholder.com/400x300',
+      technologies: ['Go', 'PostgreSQL', 'React'],
+      // demo: 'https://erp-demo.example.com',
+    },
+    {
+      title: 'Production Dashboard',
+      description: 
+        'Interactive business intelligence dashboard providing real-time KPIs, performance metrics, and data visualization for executive decision-making.',
+      // image: 'https://via.placeholder.com/400x300',
+      technologies: ['Go', 'Python', 'PostgreSQL', 'React'],
+      // demo: 'https://dashboard-demo.example.com',
+    },
+    {
+      title: 'Production Report',
+      description: 
+        'Automated reporting system that generates comprehensive production analytics, efficiency metrics, and trend analysis for manufacturing operations.',
+      // image: 'https://via.placeholder.com/400x300',
+      technologies: ['Go', 'Python', 'PostgreSQL', 'React'],
+      // demo: 'https://reports-demo.example.com',
     },
   ];
 
@@ -76,7 +91,7 @@ const Projects = () => {
                 <Typography variant="body1" sx={{ mb: 3, color: 'text.secondary' }}>
                   {project.description}
                 </Typography>
-                <Button
+                {/* <Button
                   variant="contained"
                   color="primary"
                   endIcon={<LaunchIcon />}
@@ -85,7 +100,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                 >
                   View Demo
-                </Button>
+                </Button> */}
               </Paper>
             </Grid>
           ))}

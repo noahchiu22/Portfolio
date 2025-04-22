@@ -14,6 +14,7 @@ import {
   ListItemText,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import HomeIcon from '@mui/icons-material/Home';
 import { motion } from 'framer-motion';
 import { useThemeMode } from '../context/ThemeContext';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
@@ -68,7 +69,6 @@ const Navbar = () => {
       <List>
         {navItems.map((item) => (
           <ListItem
-            button
             key={item.id}
             onClick={() => scrollToSection(item.id)}
           >
@@ -85,12 +85,19 @@ const Navbar = () => {
         <Typography
           variant="h6"
           component={motion.div}
-          whileHover={{ scale: 1.05 }}
-          sx={{ flexGrow: 1, cursor: 'pointer' }}
+          whileHover={{ scale: 1.1 }}
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            cursor: 'pointer',
+            fontSize: '2.5rem',
+          }}
           onClick={() => scrollToSection('home')}
         >
-          Portfolio
+          <HomeIcon sx={{ fontSize: 'inherit' }} />
         </Typography>
+
+        <Typography sx={{ flexGrow: 1 }} />
 
         {isMobile ? (
           <>
