@@ -28,7 +28,7 @@ const Hero = () => {
     >
       <Container>
         <Grid container spacing={4} alignItems="center">
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={8}>
             <Typography
               component={motion.h1}
               initial={{ y: 20, opacity: 0 }}
@@ -72,7 +72,8 @@ const Hero = () => {
                 fontSize: { xs: '1rem', md: '1.2rem' },
               }}
             >
-              Keen observer, passionate about work, and able to demonstrate exceptional learning ability.
+              Led 10+ backend projects over 3 years.<br/>
+              Delivered scalable systems with multi-million dollar business impact.
             </Typography>
             <Box
               component={motion.div}
