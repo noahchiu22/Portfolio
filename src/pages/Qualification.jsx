@@ -7,6 +7,7 @@ import SchoolIcon from '@mui/icons-material/School';
 const Qualification = () => {
   const qualifications = {
     work: [
+      { title: 'System Department Manager', company: 'Smart Automation Technology Co., Ltd.', period: '2026/4 - Present' },
       { title: 'Back-end Deputy Manager', company: 'Smart Automation Technology Co., Ltd.', period: '2023/12 - Present' },
       { title: 'Back-end Engineer', company: 'Smart Automation Technology Co., Ltd.', period: '2021/8 - 2023/12' },
       { title: 'Intern of MIS', company: 'EVERLIGHT', period: '2021/1 - 2021/6' },

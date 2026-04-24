@@ -8,7 +8,7 @@ import BusinessIcon from '@mui/icons-material/Business';
 
 const About = () => {
   const stats = [
-    { icon: <WorkIcon sx={{ fontSize: 40 }} />, value: '03+', label: 'Years experience' },
+    { icon: <WorkIcon sx={{ fontSize: 40 }} />, value: '04+', label: 'Years experience' },
     { icon: <CodeIcon sx={{ fontSize: 40 }} />, value: '10+', label: 'Completed Project' },
     { icon: <BusinessIcon sx={{ fontSize: 40 }} />, value: '02+', label: 'Companies worked' },
   ];
@@ -39,7 +39,7 @@ const About = () => {
                 Introduction
               </Typography>
               <Typography variant="body1" sx={{ mb: 4, color: 'text.secondary' }}>
-                Currently hold the position of Back-End Deputy Manager at Smart Automation Technology Co., Ltd.
+                System Department Manager at Smart Automation Technology Co., Ltd.
               </Typography>
               <Button
                 variant="outlined"

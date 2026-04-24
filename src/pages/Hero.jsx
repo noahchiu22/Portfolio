@@ -57,7 +57,7 @@ const Hero = () => {
                 fontWeight: 600,
               }}
             >
-              Back-end Deputy Manager
+              System Department Manager
             </Typography>
             <Typography
               component={motion.p}
@@ -72,7 +72,7 @@ const Hero = () => {
                 fontSize: { xs: '1rem', md: '1.2rem' },
               }}
             >
-              Led 10+ backend projects over 3 years.<br/>
+              Led 10+ backend projects over 4 years.<br/>
               Delivered scalable systems with multi-million dollar business impact.
             </Typography>
             <Box

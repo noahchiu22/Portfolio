@@ -42,11 +42,11 @@ const Skills = () => {
             >
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
                 <CodeIcon sx={{ mr: 1, color: 'primary.main', fontSize: 40 }} />
-                <Typography variant="h4">Back-end developer</Typography>
+                <Typography variant="h4">Back-end</Typography>
               </Box>
-              <Typography variant="subtitle1" sx={{ mb: 3, color: 'text.secondary' }}>
+              {/* <Typography variant="subtitle1" sx={{ mb: 3, color: 'text.secondary' }}>
                 More than 3 years
-              </Typography>
+              </Typography> */}
               {skills.backend.map((skill) => (
                 <Box key={skill.name} sx={{ mb: 3 }}>
                   <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
@@ -81,11 +81,11 @@ const Skills = () => {
             >
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
                 <BrushIcon sx={{ mr: 1, color: 'primary.main', fontSize: 40 }} />
-                <Typography variant="h4">Front-end developer</Typography>
+                <Typography variant="h4">Front-end</Typography>
               </Box>
-              <Typography variant="subtitle1" sx={{ mb: 3, color: 'text.secondary' }}>
+              {/* <Typography variant="subtitle1" sx={{ mb: 3, color: 'text.secondary' }}>
                 More than 2 years
-              </Typography>
+              </Typography> */}
               {skills.frontend.map((skill) => (
                 <Box key={skill.name} sx={{ mb: 3 }}>
                   <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
