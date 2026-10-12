@@ -1,0 +1,5 @@
+body ::selection,
+body *::selection {
+  background: #ffb703 !important;
+  color: #111111 !important;
+}
